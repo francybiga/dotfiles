@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/francescobigagnoli/Desktop/Prova'
+let g:netrw_dirhist_2='/Users/francescobigagnoli/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/37D234F6-0D38-474B-8A68-D174F657A497/anubis'
+let g:netrw_dirhist_3='/Users/francescobigagnoli/.vim'
