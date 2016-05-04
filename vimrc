@@ -66,4 +66,10 @@ colorscheme Tomorrow-Night-Eighties
 "use ruby syntax highlighting for Podfile
 au BufRead,BufNewFile Podfile set filetype=ruby
 
+"use ruby syntax highlighting for Fastlane configuration files
+au BufRead,BufNewFile Fastfile set filetype=ruby
+au BufRead,BufNewFile Deliverfile set filetype=ruby
+au BufRead,BufNewFile Appfile set filetype=ruby
+au BufRead,BufNewFile MatchFile set filetype=ruby
+
 
