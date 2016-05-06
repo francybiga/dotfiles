@@ -11,6 +11,8 @@ python del powerline_setup
 set laststatus=2
 "Get rid of the default mode indicator
 set noshowmode 
+"Avoid mode switch delay
+set timeoutlen=1000 ttimeoutlen=0
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
