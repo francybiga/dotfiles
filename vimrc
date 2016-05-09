@@ -25,6 +25,9 @@ Plugin 'gmarik/Vundle.vim'
 "YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 
+"CtrlP
+Plugin 'kien/ctrlp.vim'
+
 "Instant Markdown
 "Plugin 'instant-markdown.vim'
 
