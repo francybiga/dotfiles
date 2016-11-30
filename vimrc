@@ -78,6 +78,9 @@ hi LineNr  ctermfg=white
 set wildmenu
 set wildmode=full
 
+"raise history limit
+set history=200
+
 "use ruby syntax highlighting for Podfile
 au BufRead,BufNewFile Podfile set filetype=ruby
 
