@@ -77,4 +77,9 @@ au BufRead,BufNewFile Deliverfile set filetype=ruby
 au BufRead,BufNewFile Appfile set filetype=ruby
 au BufRead,BufNewFile MatchFile set filetype=ruby
 
+"disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
