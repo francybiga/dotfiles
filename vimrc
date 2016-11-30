@@ -71,6 +71,9 @@ command -nargs=* -complete=help H vertical belowright help <args>
 "color Theme
 set background=dark
 colorscheme Tomorrow-Night-Eighties
+"line number color
+hi LineNr  ctermfg=white
+
 
 "use ruby syntax highlighting for Podfile
 au BufRead,BufNewFile Podfile set filetype=ruby
