@@ -58,6 +58,9 @@ filetype plugin on	"Enable filetype-specific plugins
 
 :set tabstop=4 shiftwidth=4 expandtab "no tabs in the source file, all tab characters are 4 space characters
 
+"Automatically set fold level to each opened
+:set foldlevelstart=1
+
 "Open a vertical help with the :Help and :H command
 command -nargs=* -complete=help Help vertical belowright help <args>
 command -nargs=* -complete=help H vertical belowright help <args>
