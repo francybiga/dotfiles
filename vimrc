@@ -23,15 +23,15 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 "CtrlP
-Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
 
 "Markdown syntax, mapping rules and matching
 "https://github.com/plasticboy/vim-markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
 
 "Abolish.vim - A plugin for working with variants of a word.
 "https://github.com/tpope/vim-abolish
@@ -41,10 +41,10 @@ Plugin 'plasticboy/vim-markdown'
 "Plugin 'instant-markdown.vim'
 
 "Nerdtree 
-Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
 
 "Swift syntax
-Plugin 'kballard/vim-swift'
+"Plugin 'kballard/vim-swift'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
