@@ -74,6 +74,9 @@ colorscheme Tomorrow-Night-Eighties
 "line number color
 hi LineNr  ctermfg=white
 
+"zsh ex command autocoplete style
+set wildmenu
+set wildmode=full
 
 "use ruby syntax highlighting for Podfile
 au BufRead,BufNewFile Podfile set filetype=ruby
