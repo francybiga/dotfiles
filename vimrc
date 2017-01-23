@@ -23,7 +23,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "YouCompleteMe
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 "CtrlP
 "Plugin 'kien/ctrlp.vim'
