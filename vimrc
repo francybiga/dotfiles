@@ -28,6 +28,9 @@ Plugin 'Valloric/YouCompleteMe'
 "Fugitive git wrapper
 Plugin 'tpope/vim-fugitive'
 
+"Autotag (automatically update ctags file on file save)
+Plugin 'craigemery/vim-autotag'
+
 "CtrlP
 "Plugin 'kien/ctrlp.vim'
 
@@ -117,4 +120,8 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+"Add python tags file for *.py files, to generate this file run the
+"'ctagsPythonGen' script
+au Filetype python set tags+=~/Development/tags/python.tags
 
