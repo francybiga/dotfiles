@@ -25,6 +25,9 @@ Plugin 'gmarik/Vundle.vim'
 "YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 
+"Fugitive git wrapper
+Plugin 'tpope/vim-fugitive'
+
 "CtrlP
 "Plugin 'kien/ctrlp.vim'
 
