@@ -23,13 +23,28 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+
+"YCM will auto-close the preview window after the user leaves insert mode
+let g:ycm_autoclose_preview_window_after_insertion = 1 
 
 "Fugitive git wrapper
 Plugin 'tpope/vim-fugitive'
 
 "Autotag (automatically update ctags file on file save)
 Plugin 'craigemery/vim-autotag'
+
+"Syntax and indent files for Swift (https://github.com/keith/swift.vim)
+Plugin 'keith/swift.vim'
+
+"Swift syntax (from  https://github.com/apple/swift/tree/master/utils/vim)
+"Disabled because dosn't seem to work well for indentation
+"Plugin 'file:///Users/francescobigagnoli/.vim/vim-swift'
+
+"Auto-close parentheses
+"WARNING this plugin seems to add a significant delay in mode switching
+"(insert -> normal); thus I decided to disable it.
+"Plugin 'Townk/vim-autoclose'
 
 "CtrlP
 "Plugin 'kien/ctrlp.vim'
@@ -49,8 +64,6 @@ Plugin 'craigemery/vim-autotag'
 "Nerdtree 
 "Plugin 'scrooloose/nerdtree'
 
-"Swift syntax
-"Plugin 'kballard/vim-swift'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,6 +87,12 @@ set showcmd		"The bottom line in your editor will show you information about the
 set number
 
 syntax on		"Enable syntax highlighting
+
+set re=1 "Force using the old regex engine, this improves performances while using ruby syntax
+
+"set synmaxcol=128 "Disable syntax highlight after 128 column (to improve scroll performances)
+"syntax sync minlines=256 "Syntax highlight minlines 256 (to improve scroll performances)
+:let ruby_no_expensive = 1 "(to improve scroll performances)
 filetype on		"Enable filetype detection
 filetype indent on	"Enable filetype-specific indenting
 filetype plugin on	"Enable filetype-specific plugins
@@ -115,6 +134,13 @@ au BufRead,BufNewFile Deliverfile set filetype=ruby
 au BufRead,BufNewFile Appfile set filetype=ruby
 au BufRead,BufNewFile MatchFile set filetype=ruby
 
+"use ruby syntax highlighting for gems configuration files
+au BufRead,BufNewFile Gemfile set filetype=ruby
+au BufRead,BufNewFile Guardfile set filetype=ruby   "config file for guard gem
+
+"Make the backspace work like in most other programs
+set backspace=indent,eol,start
+
 "disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -125,3 +151,6 @@ noremap <Right> <NOP>
 "'ctagsPythonGen' script
 au Filetype python set tags+=~/Development/tags/python.tags
 
+"Open new split panes to right and bottom, which feels more natural than Vim’s default
+set splitbelow
+set splitright
