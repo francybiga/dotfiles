@@ -7,7 +7,7 @@
 
 dir=`pwd`
 old_dir=$dir/dotfiles_old
-files="vimrc vim tmux.conf"		#list of files and folders to symlink in HOME
+files="zsh vimrc vim tmux.conf"		#list of files and folders to symlink in HOME
 
 ########
 
