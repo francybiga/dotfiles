@@ -7,7 +7,7 @@
 
 dir=`pwd`
 old_dir=$dir/backup
-files="zshrc vimrc vim tmux.conf"		#list of files and folders to symlink in HOME
+files="zshrc config vimrc vim tmux.conf"		#list of files and folders to symlink in HOME
 
 ########
 
