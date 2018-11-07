@@ -58,7 +58,11 @@ plugins=(git xcode zsh-autosuggestions)
 ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 
 SCRIPTS_PATH="/Users/francescobigagnoli/Development/scripts"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$SCRIPTS_PATH:$SCRIPTS_PATH/ctagsScripts:/usr/local/go/bin"
+
+# Subito development keys 
+source  ~/.subito_dev_keys
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$SCRIPTS_PATH:$SCRIPTS_PATH/ctagsScripts:$GOBIN:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -128,9 +132,8 @@ alias cdlearn='cd $LEARNING'
 
 #use the MacVim version of Vim (installed with homebrew). The default one in high sierra doens't come with clibpoard support!
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-
-#alias for VisualStudioCode
-alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
+alias vi='vim'
+alias v='vim'
 
 #aliases for dev environments
 alias regress='ssh -A dev@isharedregress01.integration.subito.int || echo "\n -- Production VPN required, check if is on. -- \n";return 1'  
@@ -154,10 +157,22 @@ alias how2py='how2 -l python'
 
 #git alias
 alias gitPublishBranch='git push --set-upstream origin $(git_current_branch)'
+alias gitCleanMergedBranches='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
 #find aliases
 #Find a text inside xib files (using find and grep)
 alias findInXib='find . -name "*.xib" -print0 | xargs -0 grep'
+
+#Docker aliases
+alias dockImg='ruby ~/Development/dotfiles/zsh/betterdim.rb'
+alias dockPs='ruby ~/Development/dotfiles/zsh/betterdps.rb'
+
+#Virgilio aliases
+alias vr="virgilio run -n"
+alias vs="virgilio stop -n"
+alias vb="virgilio bldimg -n"
+alias vd="virgilio blddistr -n"
+alias vc="virgilio command -n"
 
 #define the env variable where Pods source file are placed (this is needed for "build.rb" to precompile pods)
 export PODS='/Users/francescobigagnoli/Workspace'
@@ -169,7 +184,3 @@ function cdf() {  # short for cdfinder
 
 #NOTE: this should always be at THE END OF THE FILE (see https://github.com/zsh-users/zsh-syntax-highlighting)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
-# added by travis gem
-[ -f /Users/francescobigagnoli/.travis/travis.sh ] && source /Users/francescobigagnoli/.travis/travis.sh
