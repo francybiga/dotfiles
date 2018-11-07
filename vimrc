@@ -32,7 +32,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 Plugin 'tpope/vim-fugitive'
 
 "Autotag (automatically update ctags file on file save)
-Plugin 'craigemery/vim-autotag'
+"Plugin 'craigemery/vim-autotag'
 
 "Syntax and indent files for Swift (https://github.com/keith/swift.vim)
 Plugin 'keith/swift.vim'
