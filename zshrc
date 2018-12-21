@@ -118,6 +118,11 @@ alias hist='history'
 alias hideDesktopIcons='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias showDesktopIcons='defaults write com.apple.finder CreateDesktop true; killall Finder'
 
+#swift aliases
+#This fixes a problem with swift repl and homebrew python
+#https://forums.swift.org/t/swift-repl-starts-with-error-when-homebrew-python-is-installed/12927/2
+alias swift='PATH="/usr/bin:$PATH" swift'
+alias sp='swift package'
 
 #xcode aliases 
 XCODE_PLUGINS='/Users/francescobigagnoli/Library/Application Support/Developer/Shared/Xcode/Plug-ins'
