@@ -56,6 +56,7 @@ plugins=(git xcode zsh-autosuggestions)
 #match_prev_cmd: Chooses the most recent match whose preceding history item matches the most recently executed command
 #https://github.com/zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
 SCRIPTS_PATH="/Users/francescobigagnoli/Development/scripts"
 
