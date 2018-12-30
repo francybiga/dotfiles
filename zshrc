@@ -85,8 +85,9 @@ fi
 #https://github.com/powerline/powerline/issues/1653)
 powerline-daemon -q
 # Powerline bash prompt
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#old mac 
+. /Library/Python/2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#old macs
+#. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 #. /usr/local/bin/powerline/bindings/zsh/powerline.zsh
 
 # Newline after prompt
