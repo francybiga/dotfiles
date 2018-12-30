@@ -60,9 +60,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
 SCRIPTS_PATH="/Users/francescobigagnoli/Development/scripts"
 
-# Subito development keys 
-source  ~/.subito_dev_keys
-
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$SCRIPTS_PATH:$SCRIPTS_PATH/ctagsScripts:$GOBIN:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
