@@ -34,3 +34,7 @@ install_if_needed("powerline-status", "pip install powerline-status --user")
 #copying dotfiles
 puts "Copying dotfiles".green
 system("./setup.sh")
+
+#install vundle (vim plugin manger)
+puts "Installing Vundle".green
+system("git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim")
