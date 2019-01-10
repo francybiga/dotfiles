@@ -116,6 +116,7 @@ powerline-daemon -q
 alias hist='history'
 alias hideDesktopIcons='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias showDesktopIcons='defaults write com.apple.finder CreateDesktop true; killall Finder'
+alias cdw='cd ~/Workspace' 
 
 #swift aliases
 #This fixes a problem with swift repl and homebrew python
@@ -127,7 +128,7 @@ alias sp='swift package'
 XCODE_PLUGINS='/Users/francescobigagnoli/Library/Application Support/Developer/Shared/Xcode/Plug-ins'
 alias cdxcplugins='cd $XCODE_PLUGINS'
 
-#shortcuts for jumping to the Subito app directory
+#shortcuts for jumping to the main  app directory
 APP='/Users/francescobigagnoli/Workspace/Subito-iOS/Subito/'
 alias cdapp='cd $APP'
 
