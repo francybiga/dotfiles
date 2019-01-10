@@ -22,6 +22,10 @@ system("sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-m
 puts "Installing zsh-syntax-highlighting".green
 system("brew install zsh-syntax-highlighting")
 
+#zsh-autosuggestions
+puts "Installing zsh-autosuggestions".green
+system("git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions")
+
 #Powerline status
 puts "Installing powerline status".green
 
@@ -38,3 +42,4 @@ system("./setup.sh")
 #install vundle (vim plugin manger)
 puts "Installing Vundle".green
 system("git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim")
+
