@@ -58,7 +58,7 @@ plugins=(git xcode zsh-autosuggestions)
 ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
-SCRIPTS_PATH="/Users/francescobigagnoli/Development/scripts"
+SCRIPTS_PATH="/Users/francesco/Development/scripts"
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$SCRIPTS_PATH:$SCRIPTS_PATH/ctagsScripts:$GOBIN:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -125,14 +125,14 @@ alias swift='PATH="/usr/bin:$PATH" swift'
 alias sp='swift package'
 
 #xcode aliases 
-XCODE_PLUGINS='/Users/francescobigagnoli/Library/Application Support/Developer/Shared/Xcode/Plug-ins'
+XCODE_PLUGINS='/Users/francesco/Library/Application Support/Developer/Shared/Xcode/Plug-ins'
 alias cdxcplugins='cd $XCODE_PLUGINS'
 
 #shortcuts for jumping to the main  app directory
-APP='/Users/francescobigagnoli/Workspace/Subito-iOS/Subito/'
+APP='/Users/francesco/Workspace/Subito-iOS/Subito/'
 alias cdapp='cd $APP'
 
-LEARNING='/Users/francescobigagnoli/Library/Mobile Documents/com~apple~CloudDocs/Learning'
+LEARNING='/Users/francesco/Library/Mobile Documents/com~apple~CloudDocs/Learning'
 alias cdlearn='cd $LEARNING'
 
 #use the MacVim version of Vim (installed with homebrew). The default one in high sierra doens't come with clibpoard support!
@@ -180,7 +180,7 @@ alias vd="virgilio blddistr -n"
 alias vc="virgilio command -n"
 
 #define the env variable where Pods source file are placed (this is needed for "build.rb" to precompile pods)
-export PODS='/Users/francescobigagnoli/Workspace'
+export PODS='/Users/francesco/Workspace'
 
 # cd into whatever is the forefront Finder window.
 function cdf() {  # short for cdfinder
