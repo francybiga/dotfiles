@@ -129,7 +129,7 @@ XCODE_PLUGINS='/Users/francesco/Library/Application Support/Developer/Shared/Xco
 alias cdxcplugins='cd $XCODE_PLUGINS'
 
 #shortcuts for jumping to the main  app directory
-APP='/Users/francesco/Workspace/Subito-iOS/Subito/'
+APP='~/Workspace/Prima'
 alias cdapp='cd $APP'
 
 LEARNING='/Users/francesco/Library/Mobile Documents/com~apple~CloudDocs/Learning'
