@@ -140,9 +140,6 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vi='vim'
 alias v='vim'
 
-#aliases for dev environments
-alias regress='ssh -A dev@isharedregress01.integration.subito.int || echo "\n -- Production VPN required, check if is on. -- \n";return 1'  
-
 alias jessica='ssh Jessica@jessica.local'
 
 #open a file in vim with readonly mode
