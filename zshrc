@@ -128,6 +128,10 @@ alias sp='swift package'
 XCODE_PLUGINS='/Users/francesco/Library/Application Support/Developer/Shared/Xcode/Plug-ins'
 alias cdxcplugins='cd $XCODE_PLUGINS'
 
+#Fastlane aliases
+#Handy alias to avoid typing "bundle exec" each time. See https://docs.fastlane.tools/getting-started/ios/setup/#use-a-gemfile 
+alias fastlane='bundle exec fastlane'
+
 #shortcuts for jumping to the main  app directory
 APP=$HOME/Workspace/Prima
 alias cdapp='cd $APP'
