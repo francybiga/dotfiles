@@ -117,6 +117,8 @@ alias hist='history'
 alias hideDesktopIcons='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias showDesktopIcons='defaults write com.apple.finder CreateDesktop true; killall Finder'
 alias cdw='cd ~/Workspace' 
+alias cdd='cd $HOME/Desktop'
+alias cddw='cd $HOME/Downloads'
 
 #swift aliases
 #This fixes a problem with swift repl and homebrew python
