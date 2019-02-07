@@ -76,6 +76,8 @@ export LC_NUMERIC="it_IT.UTF-8"
 export LC_TIME="it_IT.UTF-8"  
 export LC_ALL=  
 
+# PROMPTS
+
 #Add the pip dir to $PATH (this was needed since the Powerline command wasn't found, see https://github.com/powerline/powerline/issues/685 for more info
 if [ -d "$HOME/Library/Python/2.7/bin" ]; then
     PATH="$HOME/Library/Python/2.7/bin:$PATH"
@@ -85,7 +87,7 @@ fi
 #https://github.com/powerline/powerline/issues/1653)
 powerline-daemon -q
 # Powerline bash prompt
-. /Library/Python/2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#. /Library/Python/2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 #old macs
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 #. /usr/local/bin/powerline/bindings/zsh/powerline.zsh
@@ -93,6 +95,25 @@ powerline-daemon -q
 # Newline after prompt
 #NEWLINE=$'\n'
 #PS1=$PS1$NEWLINE
+
+# Pure prompt (https://github.com/sindresorhus/pure)
+# Initialize the prompt system (if not so already) and choose pure:
+autoload -U promptinit; promptinit
+prompt pure
+
+# Change the default prompt symbol color to green
+PROMPT='%(?.%F{green}❯.%F{red}❯)%f '
+
+# Show system time in prompt
+# 247 is gray in xterm colors https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+PROMPT='%F{247}%* '$PROMPT
+
+# For customizations check https://github.com/sindresorhus/pure/wiki
+# Show exit code of all (piped) commands in RPROMPT
+precmd_pipestatus() {
+	RPROMPT="%F{247}${(j.|.)pipestatus}" 
+}
+add-zsh-hook precmd precmd_pipestatus
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
