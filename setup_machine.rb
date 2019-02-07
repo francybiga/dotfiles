@@ -36,6 +36,10 @@ install_if_needed("pygit2", "pip install pygit2")
 install_if_needed("powerline-status", "pip install powerline-status --user")
 intall_if_needed("rmtrash", "brew install rmtrash")
 
+# Pure prompt
+install_if_needed("node", "brew install node")
+install_if_needed("pure-prompt", "npm install --global pure-prompt")
+
 #copying dotfiles
 puts "Copying dotfiles".green
 system("./setup.sh")
