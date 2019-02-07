@@ -141,6 +141,10 @@ alias cdw='cd ~/Workspace'
 alias cdd='cd $HOME/Desktop'
 alias cddw='cd $HOME/Downloads'
 
+#delete & move to trash aliases
+alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
+alias trash="rmtrash"
+
 #swift aliases
 #This fixes a problem with swift repl and homebrew python
 #https://forums.swift.org/t/swift-repl-starts-with-error-when-homebrew-python-is-installed/12927/2
