@@ -102,7 +102,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # Change the default prompt symbol color to green
-PROMPT='%(?.%F{green}❯.%F{red}❯)%f '
+PROMPT='%(?.%F{076}❯.%F{red}❯)%f '
 
 # Show system time in prompt
 # 247 is gray in xterm colors https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
