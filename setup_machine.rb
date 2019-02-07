@@ -40,6 +40,9 @@ intall_if_needed("rmtrash", "brew install rmtrash")
 install_if_needed("node", "brew install node")
 install_if_needed("pure-prompt", "npm install --global pure-prompt")
 
+# gitin
+install_if_needed("gitin", "brew tap isacikgoz/gitin;brew install gitin")
+
 #copying dotfiles
 puts "Copying dotfiles".green
 system("./setup.sh")
