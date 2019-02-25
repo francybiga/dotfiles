@@ -51,3 +51,7 @@ system("./setup.sh")
 puts "Installing Vundle".green
 system("git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim")
 
+#install ffmpeg and youtube-dl
+install_if_needed("ffmpeg", "brew install ffmpeg")
+install_if_needed("youtube-dl", "brew install youtube-dl")
+
