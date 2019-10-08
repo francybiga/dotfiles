@@ -34,7 +34,7 @@ install_if_needed("cffi", "sudo easy_install cffi")
 install_if_needed("libgit2", "brew install libgit2")
 install_if_needed("pygit2", "pip install pygit2")
 install_if_needed("powerline-status", "pip install powerline-status --user")
-intall_if_needed("rmtrash", "brew install rmtrash")
+install_if_needed("rmtrash", "brew install rmtrash")
 
 # Pure prompt
 install_if_needed("node", "brew install node")
