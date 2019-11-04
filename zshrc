@@ -196,17 +196,6 @@ alias gitCleanMergedBranches='git branch --merged | egrep -v "(^\*|master|dev)" 
 #Find a text inside xib files (using find and grep)
 alias findInXib='find . -name "*.xib" -print0 | xargs -0 grep'
 
-#Docker aliases
-alias dockImg='ruby ~/Development/dotfiles/zsh/betterdim.rb'
-alias dockPs='ruby ~/Development/dotfiles/zsh/betterdps.rb'
-
-#Virgilio aliases
-alias vr="virgilio run -n"
-alias vs="virgilio stop -n"
-alias vb="virgilio bldimg -n"
-alias vd="virgilio blddistr -n"
-alias vc="virgilio command -n"
-
 #define the env variable where Pods source file are placed (this is needed for "build.rb" to precompile pods)
 export PODS='/Users/francesco/Workspace'
 
