@@ -192,6 +192,9 @@ alias how2py='how2 -l python'
 alias gitPublishBranch='git push --set-upstream origin $(git_current_branch)'
 alias gitCleanMergedBranches='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
+#git standup
+alias gitStandup='git standup -m5 -s' # Raise depth to 5 and silence no activity messages
+
 #find aliases
 #Find a text inside xib files (using find and grep)
 alias findInXib='find . -name "*.xib" -print0 | xargs -0 grep'
