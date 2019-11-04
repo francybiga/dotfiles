@@ -212,3 +212,9 @@ function cdf() {  # short for cdfinder
 
 #NOTE: this should always be at THE END OF THE FILE (see https://github.com/zsh-users/zsh-syntax-highlighting)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/francesco/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/francesco/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/francesco/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/francesco/google-cloud-sdk/completion.zsh.inc'; fi
