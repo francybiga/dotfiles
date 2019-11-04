@@ -179,6 +179,9 @@ alias vimr='vim -R'
 #Colors and exclude dir on GNU Grep
 ggrep='ggrep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 
+#Prettify json
+alias prettyjson='python -m json.tool'
+
 #how2 aliases
 alias how2swift='how2 -l swift'
 alias how2objc='how2 -l objective-c'
