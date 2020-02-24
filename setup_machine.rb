@@ -55,3 +55,5 @@ system("git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vund
 install_if_needed("ffmpeg", "brew install ffmpeg")
 install_if_needed("youtube-dl", "brew install youtube-dl")
 
+# jq (JSON from command line)
+install_if_needed("jq", "brew install jq")
