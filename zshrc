@@ -160,7 +160,7 @@ alias cdxcplugins='cd $XCODE_PLUGINS'
 alias fastlane='bundle exec fastlane'
 
 #shortcuts for jumping to the main  app directory
-APP=$HOME/Workspace/Prima
+APP=$HOME/Workspace/Prima-iOS
 alias cdapp='cd $APP'
 
 LEARNING='/Users/francesco/Library/Mobile Documents/com~apple~CloudDocs/Learning'
