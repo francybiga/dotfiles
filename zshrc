@@ -170,6 +170,7 @@ alias cdlearn='cd $LEARNING'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vi='vim'
 alias v='vim'
+alias vdiff='vim -d' # Open vim in diff mode
 
 alias jessica='ssh Jessica@jessica.local'
 
