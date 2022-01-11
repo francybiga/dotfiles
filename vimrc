@@ -41,10 +41,8 @@ Plugin 'keith/swift.vim'
 "Disabled because dosn't seem to work well for indentation
 "Plugin 'file:///Users/francescobigagnoli/.vim/vim-swift'
 
-"Auto-close parentheses
-"WARNING this plugin seems to add a significant delay in mode switching
-"(insert -> normal); thus I decided to disable it.
-"Plugin 'Townk/vim-autoclose'
+"Auto Pairs: Insert or delete brackets, parens, quotes in pair.
+Plugin 'jiangmiao/auto-pairs'
 
 "CtrlP
 "Plugin 'kien/ctrlp.vim'
