@@ -139,12 +139,6 @@ au BufRead,BufNewFile Guardfile set filetype=ruby   "config file for guard gem
 "Make the backspace work like in most other programs
 set backspace=indent,eol,start
 
-"disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
 "Add python tags file for *.py files, to generate this file run the
 "'ctagsPythonGen' script
 au Filetype python set tags+=~/Development/tags/python.tags
