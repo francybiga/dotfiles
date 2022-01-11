@@ -166,8 +166,6 @@ alias cdapp='cd $APP'
 LEARNING='/Users/francesco/Library/Mobile Documents/com~apple~CloudDocs/Learning'
 alias cdlearn='cd $LEARNING'
 
-#use the MacVim version of Vim (installed with homebrew). The default one in high sierra doens't come with clibpoard support!
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vi='vim'
 alias v='vim'
 alias vdiff='vim -d' # Open vim in diff mode
