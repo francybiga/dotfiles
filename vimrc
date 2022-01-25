@@ -4,9 +4,9 @@ filetype off                  " required
 
 "Powerline status line
 set rtp+=/usr/local/bin/powerline/bindings/vim
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 " Always show statusline
 set laststatus=2
 "Get rid of the default mode indicator
