@@ -120,12 +120,7 @@ precmd_pipestatus() {
 }
 add-zsh-hook precmd precmd_pipestatus
 
-# Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
- fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
