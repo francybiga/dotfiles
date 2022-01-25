@@ -60,7 +60,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
 SCRIPTS_PATH="/Users/francesco/Development/scripts"
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$SCRIPTS_PATH:$SCRIPTS_PATH/ctagsScripts:$GOBIN:/usr/local/go/bin"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$SCRIPTS_PATH:$SCRIPTS_PATH/ctagsScripts:$GOBIN:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -99,6 +99,10 @@ fi
 
 # Pure prompt (https://github.com/sindresorhus/pure)
 # Initialize the prompt system (if not so already) and choose pure:
+
+#Needed on AppleSilicon machines, where homebrew has changed path https://github.com/sindresorhus/pure/issues/5
+fpath+=/opt/homebrew/share/zsh/site-functions
+
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -211,10 +215,13 @@ function cdf() {  # short for cdfinder
 }
 
 #NOTE: this should always be at THE END OF THE FILE (see https://github.com/zsh-users/zsh-syntax-highlighting)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/francesco/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/francesco/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/francesco/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/francesco/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
