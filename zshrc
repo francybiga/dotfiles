@@ -85,7 +85,8 @@ fi
 
 #Start powerline daemon (this should make prompt more fast according to
 #https://github.com/powerline/powerline/issues/1653)
-powerline-daemon -q
+#powerline-daemon -q
+
 # Powerline bash prompt
 #. /Library/Python/2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 #old macs
