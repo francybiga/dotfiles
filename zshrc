@@ -65,17 +65,6 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-#Set UTF-8 Locale (needed for Powerline)
-export LANG="it_IT.UTF-8"  
-export LC_COLLATE="it_IT.UTF-8"  
-export LC_CTYPE="it_IT.UTF-8"  
-export LC_MESSAGES="it_IT.UTF-8"  
-export LC_MONETARY="it_IT.UTF-8"  
-export LC_NUMERIC="it_IT.UTF-8"  
-export LC_TIME="it_IT.UTF-8"  
-export LC_ALL=  
-
 # PROMPTS
 
 #Add the pip dir to $PATH (this was needed since the Powerline command wasn't found, see https://github.com/powerline/powerline/issues/685 for more info
