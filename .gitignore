@@ -2,3 +2,6 @@ vim/bundle
 .*swp
 vim/.netrwhist
 
+# Github CLI config file (contains oath token)
+config/hub
+
