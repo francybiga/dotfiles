@@ -1,0 +1,14 @@
+{
+    "window.zoomLevel": 2,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": "#548a04",
+    "vim.statusBarColors.insert": "#195478",
+    "vim.statusBarColors.visual": "#ffaf01",
+    "vim.statusBarColors.visualblock": "#ffaf01",
+    "vim.statusBarColors.replace": "#c53019",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#548a04",
+        "statusBar.noFolderBackground": "#548a04",
+        "statusBar.debuggingBackground": "#548a04"
+    },
+}
