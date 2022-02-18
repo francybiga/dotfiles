@@ -132,7 +132,6 @@ alias cddw='cd $HOME/Downloads'
 
 #delete & move to trash aliases
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
-alias trash="rmtrash"
 
 #swift aliases
 #This fixes a problem with swift repl and homebrew python
