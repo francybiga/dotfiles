@@ -1,5 +1,4 @@
 {
-    "window.zoomLevel": 2,
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": "#548a04",
     "vim.statusBarColors.insert": "#195478",
@@ -11,4 +10,7 @@
         "statusBar.noFolderBackground": "#195478",
         "statusBar.debuggingBackground": "#195478"
     },
+    "window.zoomLevel": 1,
+    "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "editor.renderWhitespace": "all",
 }
