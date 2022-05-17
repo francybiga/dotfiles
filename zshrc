@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+export DOTFILES=$HOME/Development/dotfiles
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -55,7 +57,7 @@ plugins=(git xcode zsh-autosuggestions)
 
 # Load all the files in /shell_load
 typeset -U load_files
-load_files=(shell_load/**/*)
+load_files=($DOTFILES/shell_load/**/*)
 for file in $load_files
 do
   source $file
