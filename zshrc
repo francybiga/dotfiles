@@ -182,6 +182,8 @@ alias how2py='how2 -l python'
 #git alias
 alias gitPublishBranch='git push --set-upstream origin $(git_current_branch)'
 alias gitCleanMergedBranches='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+# Override oh my zsh glo alias with my own
+alias glo='git log --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'' --date=short'
 
 #git standup
 alias gitStandup='git standup -m5 -s' # Raise depth to 5 and silence no activity messages
