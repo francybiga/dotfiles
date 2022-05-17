@@ -156,9 +156,13 @@ alias cdxcplugins='cd $XCODE_PLUGINS'
 #Handy alias to avoid typing "bundle exec" each time. See https://docs.fastlane.tools/getting-started/ios/setup/#use-a-gemfile 
 alias fastlane='bundle exec fastlane'
 
-#shortcuts for jumping to the main  app directory
+#shortcuts for jumping to the main app directory
 APP=$HOME/Workspace/Spotify/client-ios
 alias cdapp='cd $APP'
+
+# jump to monorepo directory
+MONO=$HOME/Workspace/Spotify/client
+alias cdmono='cd $MONO'
 
 LEARNING=$HOME/Dropbox/Learning
 alias cdl='cd $LEARNING'
