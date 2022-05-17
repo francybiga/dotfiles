@@ -7,8 +7,8 @@
     "vim.statusBarColors.visualblock": "#ffaf01",
     "vim.statusBarColors.replace": "#c53019",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#548a04",
-        "statusBar.noFolderBackground": "#548a04",
-        "statusBar.debuggingBackground": "#548a04"
+        "statusBar.background": "#195478",
+        "statusBar.noFolderBackground": "#195478",
+        "statusBar.debuggingBackground": "#195478"
     },
 }
