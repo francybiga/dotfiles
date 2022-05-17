@@ -151,8 +151,8 @@ alias fastlane='bundle exec fastlane'
 APP=$HOME/Workspace/Spotify/client-ios
 alias cdapp='cd $APP'
 
-LEARNING='/Users/francesco/Library/Mobile Documents/com~apple~CloudDocs/Learning'
-alias cdlearn='cd $LEARNING'
+LEARNING=$HOME/Dropbox/Learning
+alias cdl='cd $LEARNING'
 
 alias vi='vim'
 alias v='vim'
