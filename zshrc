@@ -53,6 +53,14 @@ plugins=(git xcode zsh-autosuggestions)
 
 # User configuration
 
+# Load all the files in /shell_load
+typeset -U load_files
+load_files=(shell_load/**/*)
+for file in $load_files
+do
+  source $file
+done
+
 #match_prev_cmd: Chooses the most recent match whose preceding history item matches the most recently executed command
 #https://github.com/zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
