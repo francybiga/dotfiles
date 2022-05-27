@@ -13,4 +13,5 @@
     "window.zoomLevel": 1,
     "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
     "editor.renderWhitespace": "all",
+    "vim.useSystemClipboard": true,
 }
