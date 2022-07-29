@@ -4,3 +4,5 @@ brew "fzf"
 brew "hub"
 brew "tig"
 brew "zsh-syntax-highlighting"
+brew "difftastic"
+brew "ripgrep" # rg 
