@@ -6,12 +6,13 @@
     "vim.statusBarColors.visualblock": "#ffaf01",
     "vim.statusBarColors.replace": "#c53019",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#195478",
-        "statusBar.noFolderBackground": "#195478",
-        "statusBar.debuggingBackground": "#195478"
+        "statusBar.background": "#548a04",
+        "statusBar.noFolderBackground": "#548a04",
+        "statusBar.debuggingBackground": "#548a04"
     },
-    "window.zoomLevel": 1,
     "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
     "editor.renderWhitespace": "all",
     "vim.useSystemClipboard": true,
+    "window.zoomLevel": 3,
+    "files.autoSave": "afterDelay",
 }
