@@ -73,6 +73,9 @@ SCRIPTS_PATH="/Users/francesco/Development/scripts"
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$SCRIPTS_PATH:$SCRIPTS_PATH/ctagsScripts:$GOBIN:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Add Rust tools to PATH
+export PATH=$PATH:$HOME/.cargo/bin
+
 source $ZSH/oh-my-zsh.sh
 
 # PROMPTS
