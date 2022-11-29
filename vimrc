@@ -23,11 +23,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "YouCompleteMe
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 
 "YCM will auto-close the preview window after the user leaves insert mode
 let g:ycm_autoclose_preview_window_after_insertion = 1 
-
 "Fugitive git wrapper
 Plugin 'tpope/vim-fugitive'
 
