@@ -12,3 +12,4 @@ brew 'trash'
 brew 'ripgrep-all' # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz
 brew 'poppler' # needed to serach inside pdf files with ripgrep-all
 brew 'bat' # a cat clone with syntax highlight and git support
+brew 'fd' # a simple, fast and user-friendly alternative to find
