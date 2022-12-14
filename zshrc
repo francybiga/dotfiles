@@ -196,11 +196,16 @@ alias how2vim='how2 -l vim'
 alias how2shell='how2 -l shell'
 alias how2py='how2 -l python'
 
-#git alias
+#git aliases
 alias gitPublishBranch='git push --set-upstream origin $(git_current_branch)'
-alias gitCleanMergedBranches='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+# Clean merged branches, also support squashed branches. 
+# More info: https://stackoverflow.com/questions/43489303/how-can-i-delete-all-git-branches-which-have-been-squash-and-merge-via-github
+alias gitCleanMergedBranches='git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
+alias gaddconflicts='git diff --name-only --diff-filter=U --relative | xargs git add'
+
 # Override oh my zsh glo alias with my own
 alias glo='git log --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'' --date=short'
+
 
 #git standup
 alias gitStandup='git standup -m5 -s' # Raise depth to 5 and silence no activity messages
