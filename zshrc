@@ -143,6 +143,7 @@ alias cdw='cd ~/Workspace'
 alias cdd='cd $HOME/Desktop'
 alias cddw='cd $HOME/Downloads'
 alias findn='find . -name'
+alias b='bat'
 
 #delete & move to trash aliases
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
