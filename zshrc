@@ -234,3 +234,9 @@ if [ -f '/Users/fbigagnoli/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/fbigagnoli/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fbigagnoli/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# Enable fzf keybindings
+# https://github.com/junegunn/fzf#key-bindings-for-command-line
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
