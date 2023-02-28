@@ -157,10 +157,10 @@ set splitright
 " Line numbers: automatic switch between relative in NORMAL and absolute in
 " INSERT and when editor doens't have focus
 " https://jeffkreeftmeijer.com/vim-number/
-":set number
-":augroup numbertoggle
-":  autocmd!
-":  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-":  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-":augroup END
+:set number
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
 
