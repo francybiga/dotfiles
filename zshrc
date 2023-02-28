@@ -144,6 +144,11 @@ alias cdd='cd $HOME/Desktop'
 alias cddw='cd $HOME/Downloads'
 alias findn='find . -name'
 alias b='bat'
+alias c='code'
+
+# bazel
+alias bz='bazel'
+alias bzb='bazel build'
 
 #delete & move to trash aliases
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
