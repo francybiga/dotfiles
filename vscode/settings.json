@@ -6,13 +6,18 @@
     "vim.statusBarColors.visualblock": "#ffaf01",
     "vim.statusBarColors.replace": "#c53019",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#548a04",
-        "statusBar.noFolderBackground": "#548a04",
-        "statusBar.debuggingBackground": "#548a04"
+        "statusBar.background": "#ffaf01",
+        "statusBar.noFolderBackground": "#ffaf01",
+        "statusBar.debuggingBackground": "#ffaf01"
     },
     "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
     "editor.renderWhitespace": "all",
     "vim.useSystemClipboard": true,
-    "window.zoomLevel": 3,
     "files.autoSave": "afterDelay",
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "always",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": 3,
 }
