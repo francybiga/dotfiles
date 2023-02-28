@@ -61,6 +61,8 @@ Plugin 'jiangmiao/auto-pairs'
 "Nerdtree 
 "Plugin 'scrooloose/nerdtree'
 
+"GitGutter
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -121,6 +123,9 @@ set wildmode=full
 
 "raise history limit
 set history=200
+
+"reduce time before buffer is written to swap (makes gitgutter updates instant)
+set updatetime=100
 
 "use ruby syntax highlighting for Podfile
 au BufRead,BufNewFile Podfile set filetype=ruby

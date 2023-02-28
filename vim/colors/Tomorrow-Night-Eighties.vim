@@ -474,6 +474,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("diffRemoved", s:red, "", "")
 	call <SID>X("gitcommitSummary", "", "", "bold")
 
+    " GitGutter (git status for each line, on SignColumn)
+    call <SID>X("GitGutterAdd", s:green, "", "")
+    call <SID>X("GitGutterChange", s:yellow, "", "")
+    call <SID>X("GitGutterDelete", s:red, "", "")
+
 	" Delete Functions
 	delf <SID>X
 	delf <SID>rgb
