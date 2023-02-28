@@ -182,8 +182,6 @@ alias vi='vim'
 alias v='vim'
 alias vdiff='vim -d' # Open vim in diff mode
 
-alias jessica='ssh Jessica@jessica.local'
-
 #open a file in vim with readonly mode
 alias vimr='vim -R'
 
