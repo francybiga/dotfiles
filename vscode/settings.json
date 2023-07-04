@@ -20,4 +20,5 @@
         "editor.formatOnType": true
     },
     "window.zoomLevel": 3,
+    "editor.find.seedSearchStringFromSelection": "never",
 }
