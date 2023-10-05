@@ -13,3 +13,7 @@ brew 'ripgrep-all' # ripgrep, but also search in PDFs, E-Books, Office documents
 brew 'poppler' # needed to serach inside pdf files with ripgrep-all
 brew 'bat' # a cat clone with syntax highlight and git support
 brew 'fd' # a simple, fast and user-friendly alternative to find
+brew 'shellcheck' # a static analysis tool for shell scripts
+brew 'httpie' # human-friendly CLI HTTP client 
+brew 'yq' # a lightweight and portable command-line YAML, JSON and XML processor
+brew 'jq' # a lightweight and flexible command-line JSON processor
