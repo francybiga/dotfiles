@@ -147,8 +147,9 @@ alias b='bat'
 alias c='code'
 
 # bazel
-alias bz='bazel'
-alias bzb='bazel build'
+alias bz='bazelisk'
+alias bzb='bazelisk build'
+alias bzq='bazelisk query'
 
 #delete & move to trash aliases
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
