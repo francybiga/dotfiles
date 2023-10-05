@@ -192,15 +192,6 @@ ggrep='ggrep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 #Prettify json
 alias prettyjson='python -m json.tool'
 
-#how2 aliases
-alias how2swift='how2 -l swift'
-alias how2objc='how2 -l objective-c'
-alias how2ios='how2 -l ios'
-alias how2ruby='how2 -l ruby'
-alias how2vim='how2 -l vim'
-alias how2shell='how2 -l shell'
-alias how2py='how2 -l python'
-
 #git aliases
 alias gitPublishBranch='git push --set-upstream origin $(git_current_branch)'
 # Clean merged branches, also support squashed branches. 
