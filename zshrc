@@ -176,6 +176,8 @@ alias cdapp='cd $APP'
 MONO=$HOME/Workspace/Spotify/client
 alias cdmono='cd $MONO'
 
+# jump to client-core
+alias cdcore='cd ~/Workspace/Spotify/client-core'
 LEARNING=$HOME/Dropbox/Learning
 alias cdl='cd $LEARNING'
 
