@@ -240,7 +240,15 @@ if [ -f '/Users/fbigagnoli/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 if [ -f '/Users/fbigagnoli/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fbigagnoli/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 
+
+# fzf
 # Enable fzf keybindings
 # https://github.com/junegunn/fzf#key-bindings-for-command-line
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Setting fd as the default source for fzf (to respect gitignore)
+# https://github.com/junegunn/fzf#respecting-gitignore
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
