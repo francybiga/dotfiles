@@ -2,11 +2,6 @@ set clipboard=unnamed         "all yanking/deleting operations automatically cop
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-"Powerline status line
-set rtp+=/usr/local/bin/powerline/bindings/vim
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
 " Always show statusline
 set laststatus=2
 "Get rid of the default mode indicator
@@ -42,6 +37,10 @@ Plugin 'keith/swift.vim'
 
 "Auto Pairs: Insert or delete brackets, parens, quotes in pair.
 Plugin 'jiangmiao/auto-pairs'
+
+" Powerline status
+" https://powerline.readthedocs.io/en/master/usage/other.html#vim-statusline
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 "CtrlP
 "Plugin 'kien/ctrlp.vim'
