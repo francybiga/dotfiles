@@ -192,7 +192,7 @@ alias vimr='vim -R'
 ggrep='ggrep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 
 #Prettify json
-alias prettyjson='python -m json.tool'
+alias prettyjson='python3 -m json.tool'
 
 #git aliases
 alias gitPublishBranch='git push --set-upstream origin $(git_current_branch)'
