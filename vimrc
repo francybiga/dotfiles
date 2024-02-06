@@ -100,6 +100,19 @@ filetype plugin on	"Enable filetype-specific plugins
 "Automatically set fold level to each opened
 :set foldlevelstart=1
 
+" Use a line cursor within insert mode and a block cursor everywhere else.
+"
+" Reference chart of values:
+"   Ps = 0  -> blinking block.
+"   Ps = 1  -> blinking block (default).
+"   Ps = 2  -> steady block.
+"   Ps = 3  -> blinking underline.
+"   Ps = 4  -> steady underline.
+"   Ps = 5  -> blinking bar (xterm).
+"   Ps = 6  -> steady bar (xterm).
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 "Open a vertical help with the :Help and :H command
 command -nargs=* -complete=help Help vertical belowright help <args>
 command -nargs=* -complete=help H vertical belowright help <args>
