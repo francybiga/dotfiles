@@ -18,4 +18,5 @@ brew 'httpie' # human-friendly CLI HTTP client
 brew 'yq' # a lightweight and portable command-line YAML, JSON and XML processor
 brew 'jq' # a lightweight and flexible command-line JSON processor
 brew 'ssed' # super sed stream editor 
+brew 'sd' # an intuitive find & replace CLI https://github.com/chmln/sd
 brew 'wget' 
