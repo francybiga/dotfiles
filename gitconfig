@@ -1,0 +1,35 @@
+[user]
+	email = fbigagnoli@spotify.com
+	name = Francesco Bigagnoli
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[hub]
+	host = ghe.spotify.net
+[rerere]
+	enabled = true
+
+# Use difftastic as git-difftool https://difftastic.wilfred.me.uk/git.html
+[diff]
+    tool = difftastic
+
+[difftool]
+    prompt = false
+
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+
+# Use a pager for large output, just like other git commands.
+[pager]
+    difftool = true
+
+# `git dft` is less to type than `git difftool`.
+[alias]
+    dft = difftool
+
