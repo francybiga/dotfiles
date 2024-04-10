@@ -4,4 +4,11 @@ vim/.netrwhist
 
 # Github CLI config file (contains oath token)
 config/hub
+config/gh
+config/github-copilot
+
+# gcloud config (contains secrets and credentials)
+config/gcloud
+
+config/pip
 
