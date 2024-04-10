@@ -20,6 +20,7 @@ brew 'jq' # a lightweight and flexible command-line JSON processor
 brew 'ssed' # super sed stream editor 
 brew 'sd' # an intuitive find & replace CLI https://github.com/chmln/sd
 brew 'wget' 
+brew 'broot' # A better way to navigate directories https://github.com/Canop/broot
 
 # Cask
 brew install --cask rectangle # A window management app based on Spectacle https://github.com/rxhanson/Rectangle
