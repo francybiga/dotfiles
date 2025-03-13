@@ -24,4 +24,5 @@ brew 'broot' # A better way to navigate directories https://github.com/Canop/bro
 
 # Cask
 brew install --cask rectangle # A window management app based on Spectacle https://github.com/rxhanson/Rectangle
+brew install --cask monitorcontrol # Controls your external display brightness and volume and shows native OSD
 
