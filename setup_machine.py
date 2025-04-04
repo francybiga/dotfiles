@@ -32,7 +32,6 @@ TOOLS = {
     "zsh-syntax-highlighting": "brew install zsh-syntax-highlighting",
     "node": "brew install node",
     "pure-prompt": "npm install --global pure-prompt",
-    "gitin": "brew tap isacikgoz/gitin && brew install gitin",
     "ffmpeg": "brew install ffmpeg",
     "youtube-dl": "brew install youtube-dl",
     "jq": "brew install jq",
