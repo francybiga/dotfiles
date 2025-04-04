@@ -6,22 +6,104 @@
     "vim.statusBarColors.visualblock": "#ffaf01",
     "vim.statusBarColors.replace": "#c53019",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#548a04",
-        "statusBar.noFolderBackground": "#548a04",
-        "statusBar.debuggingBackground": "#548a04",
+        "statusBar.background": "#ffaf01",
+        "statusBar.noFolderBackground": "#ffaf01",
+        "statusBar.debuggingBackground": "#ffaf01",
         "statusBar.foreground": "#ffffff",
         "statusBar.debuggingForeground": "#ffffff"
     },
-    "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "lldb.library": "/Applications/Xcode-1600.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
     "editor.renderWhitespace": "all",
     "vim.useSystemClipboard": true,
     "files.autoSave": "afterDelay",
     "security.workspace.trust.untrustedFiles": "open",
     "git.openRepositoryInParentFolders": "always",
     "[python]": {
-        "editor.formatOnType": true
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            100
+        ],
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.autopep8"
     },
-    "window.zoomLevel": 3,
+    "C_Cpp.clang_format_fallbackStyle": "Google",
     "editor.find.seedSearchStringFromSelection": "never",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "editor.formatOnType": true,
+    "editor.indentSize": "tabSize",
+    "launch": {
+        "configurations": [
+            {
+                "name": "Python: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "env": {
+                    "PYTHONPATH": "$PYTHONPATH:/Users/fbigagnoli/Workspace/Spotify/client-ios",
+                    "PATH": "$PATH:/opt/homebrew/bin"
+                }
+            },
+            {
+                "name": "Python: Attach",
+                "type": "python",
+                "request": "attach",
+                "port": 5678,
+                "host": "localhost"
+            },
+            {
+                "name": "Appsize attribution",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "args": [
+                    "perform_app_size_attribution",
+                    "ios-music-app",
+                    "0.1",
+                    "/Users/fbigagnoli/Workspace/Spotify/client-ios/.deps/xcarchive.zip",
+                    "/Users/fbigagnoli/Workspace/Spotify/client-ios"
+                ],
+                "env": {
+                    "PYTHONPATH": "$PYTHONPATH:/Users/fbigagnoli/Workspace/Spotify/client-ios",
+                }
+            }
+        ]
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "avro": false
+    },
+    "lldb.launch.expressions": "native",
+    "python.experiments.enabled": false,
+    "editor.accessibilitySupport": "off",
+    "window.zoomLevel": 2,
     "vim.smartRelativeLine": true,
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "debug.javascript.autoAttachFilter": "always",
+    "python.defaultInterpreterPath": "/Users/fbigagnoli/Workspace/Spotify/client-ios/venv/bin/python",
+
+    "cSpell.userWords": [
+        "symbolicate",
+        "toolset",
+        "WWDC"
+    ],
+    "cSpell.enableFiletypes": [
+        "!python"
+    ],
+    "editor.multiCursorModifier": "alt",
+    "workbench.editor.enablePreview": false,
+    "C_Cpp.dimInactiveRegions": false,
+    "editor.minimap.enabled": false,
+    "git.blame.editorDecoration.enabled": false,
 }
