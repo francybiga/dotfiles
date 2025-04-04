@@ -10,7 +10,7 @@ brew 'tldr' # short info about shell commands
 brew 'vim' # macOS vim doesn't support powerline status
 brew 'trash'
 brew 'ripgrep-all' # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz
-brew 'poppler' # needed to serach inside pdf files with ripgrep-all
+brew 'poppler' # needed to search inside pdf files with ripgrep-all (rga)
 brew 'bat' # a cat clone with syntax highlight and git support
 brew 'fd' # a simple, fast and user-friendly alternative to find
 brew 'shellcheck' # a static analysis tool for shell scripts
