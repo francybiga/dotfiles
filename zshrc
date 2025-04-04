@@ -76,6 +76,13 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt
 # Add Rust tools to PATH
 export PATH=$PATH:$HOME/.cargo/bin
 
+# Add homebrew psql to PATH
+# https://stackoverflow.com/questions/44654216/correct-way-to-install-psql-without-full-postgres-on-macos/49689589#49689589
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Add google-cloud-sdk binaries to PATH
+export PATH="/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
+
 source $ZSH/oh-my-zsh.sh
 
 # PROMPTS
@@ -139,7 +146,7 @@ export EDITOR='vim'
 alias hist='history'
 alias hideDesktopIcons='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias showDesktopIcons='defaults write com.apple.finder CreateDesktop true; killall Finder'
-alias cdw='cd ~/Workspace' 
+alias cdw='cd ~/Workspace/Spotify' 
 alias cdd='cd $HOME/Desktop'
 alias cddw='cd $HOME/Downloads'
 alias findn='find . -name'
@@ -232,7 +239,13 @@ if [ -f '/Users/fbigagnoli/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/fbigagnoli/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fbigagnoli/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # fzf
 # Enable fzf keybindings
