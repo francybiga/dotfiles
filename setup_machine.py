@@ -36,6 +36,7 @@ TOOLS = {
     "youtube-dl": "brew install youtube-dl",
     "jq": "brew install jq",
     "rmtrash": "brew install rmtrash",
+    "pyenv": "brew install pyenv",
 }
 
 PYTHON_PACKAGES = {
@@ -66,6 +67,31 @@ def setup_tools() -> bool:
         if prog != "brew" and not install_if_missing(prog, cmd):
             return False
 
+    return True
+
+
+def setup_pyenv() -> bool:
+    """Setup pyenv and install Python versions."""
+    # Install Python versions
+    python_versions = ["3.11.5", "3.10.13", "3.9.18"]
+    for version in python_versions:
+        if not run(f"pyenv install --skip-existing {version}"):
+            return False
+    
+    # Set global Python version
+    if not run("pyenv global 3.11.5"):
+        return False
+    
+    # Install pyenv-virtualenv plugin
+    pyenv_plugins_dir = os.path.expanduser("~/.pyenv/plugins")
+    if not os.path.exists(pyenv_plugins_dir):
+        os.makedirs(pyenv_plugins_dir)
+    
+    virtualenv_path = os.path.join(pyenv_plugins_dir, "pyenv-virtualenv")
+    if not os.path.exists(virtualenv_path):
+        if not run(f"git clone https://github.com/pyenv/pyenv-virtualenv.git {virtualenv_path}"):
+            return False
+    
     return True
 
 
@@ -150,6 +176,7 @@ def main() -> None:
 
     if not all([
         setup_tools(),
+        setup_pyenv(),
         setup_oh_my_zsh(),
         setup_vim(),
         setup_dotfiles()
