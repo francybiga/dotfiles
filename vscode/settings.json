@@ -42,7 +42,7 @@
                 "program": "${file}",
                 "console": "integratedTerminal",
                 "env": {
-                    "PYTHONPATH": "$PYTHONPATH:/Users/fbigagnoli/Workspace/Spotify/client-ios",
+                    "PYTHONPATH": "$PYTHONPATH:/Users/fbigagnoli/Workspace/Spotify/client",
                     "PATH": "$PATH:/opt/homebrew/bin"
                 }
             },
@@ -91,7 +91,7 @@
     },
     "github.copilot.editor.enableAutoCompletions": true,
     "debug.javascript.autoAttachFilter": "always",
-    "python.defaultInterpreterPath": "/Users/fbigagnoli/Workspace/Spotify/client-ios/venv/bin/python",
+    "python.defaultInterpreterPath": "/Users/fbigagnoli/Workspace/Spotify/client/venv/bin/python",
 
     "cSpell.userWords": [
         "symbolicate",
