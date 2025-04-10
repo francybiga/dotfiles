@@ -143,13 +143,9 @@ export EDITOR='vim'
 # For a full list of active aliases, run `alias`.
 
 #general aliases
-alias hist='history'
-alias hideDesktopIcons='defaults write com.apple.finder CreateDesktop false; killall Finder'
-alias showDesktopIcons='defaults write com.apple.finder CreateDesktop true; killall Finder'
 alias cdw='cd ~/Workspace/Spotify' 
 alias cdd='cd $HOME/Desktop'
 alias cddw='cd $HOME/Downloads'
-alias findn='find . -name'
 alias b='bat'
 alias c='code'
 
@@ -169,11 +165,6 @@ alias sp='swift package'
 
 #xcode aliases 
 XCODE_PLUGINS='/Users/francesco/Library/Application Support/Developer/Shared/Xcode/Plug-ins'
-alias cdxcplugins='cd $XCODE_PLUGINS'
-
-#Fastlane aliases
-#Handy alias to avoid typing "bundle exec" each time. See https://docs.fastlane.tools/getting-started/ios/setup/#use-a-gemfile 
-alias fastlane='bundle exec fastlane'
 
 #shortcuts for jumping to the main app directory
 APP=$HOME/Workspace/Spotify/client-ios
@@ -195,9 +186,6 @@ alias vdiff='vim -d' # Open vim in diff mode
 #open a file in vim with readonly mode
 alias vimr='vim -R'
 
-#Colors and exclude dir on GNU Grep
-ggrep='ggrep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
-
 #Prettify json
 alias prettyjson='python3 -m json.tool'
 
@@ -211,17 +199,6 @@ alias gaddconflicts='git diff --name-only --diff-filter=U --relative | xargs git
 # Override oh my zsh glo alias with my own
 alias glo='git log --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'' --date=short'
 
-
-#git standup
-alias gitStandup='git standup -m5 -s' # Raise depth to 5 and silence no activity messages
-
-#find aliases
-#Find a text inside xib files (using find and grep)
-alias findInXib='find . -name "*.xib" -print0 | xargs -0 grep'
-
-#define the env variable where Pods source file are placed (this is needed for "build.rb" to precompile pods)
-export PODS='/Users/francesco/Workspace'
-
 # cd into whatever is the forefront Finder window.
 function cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
@@ -231,7 +208,6 @@ function cdf() {  # short for cdfinder
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/fbigagnoli/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/fbigagnoli/Downloads/google-cloud-sdk/path.zsh.inc'; fi
