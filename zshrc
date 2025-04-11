@@ -167,7 +167,7 @@ alias sp='swift package'
 XCODE_PLUGINS='/Users/francesco/Library/Application Support/Developer/Shared/Xcode/Plug-ins'
 
 #shortcuts for jumping to the main app directory
-APP=$HOME/Workspace/Spotify/client-ios
+APP=$HOME/Workspace/Spotify/client
 alias cdapp='cd $APP'
 
 # jump to monorepo directory
