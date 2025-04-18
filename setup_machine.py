@@ -45,12 +45,12 @@ def setup_tools() -> bool:
     install_if_missing(
         "brew",
         # The eval command "activates" brew
-        '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"'
+        '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"',
         silent=False
     )
 
     # Install brew packages from Brewfile
-    run("brew bundle")
+    run("Brewfile", "brew bundle", silent=False)
 
     # Install Python packages
     for prog, cmd in PYTHON_PACKAGES.items():
