@@ -8,11 +8,11 @@ import subprocess
 from pathlib import Path
 
 
-def run(cmd: str, ignore_error: bool = False) -> bool:
+def run(cmd: str, ignore_error: bool = False, silent=True) -> bool:
     """Run a shell command and return success status."""
     try:
         subprocess.run(cmd, shell=True, check=True,
-                       capture_output=True, text=True)
+                       capture_output=silent, text=True)
         return True
     except subprocess.CalledProcessError:
         if not ignore_error:
@@ -20,12 +20,12 @@ def run(cmd: str, ignore_error: bool = False) -> bool:
         return False
 
 
-def install_if_missing(prog: str, cmd: str) -> bool:
+def install_if_missing(prog: str, cmd: str, silent=True) -> bool:
     """Install a program if it's not already installed."""
     if run(f"command -v {prog} > /dev/null 2>&1", ignore_error=True):
         print(f"{prog} already installed")
         return True
-    print(f"Installing {prog}...")
+    print(f"[setup_machine]: Installing {prog}...")
     return run(cmd)
 
 
@@ -46,6 +46,7 @@ def setup_tools() -> bool:
         "brew",
         # The eval command "activates" brew
         '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"'
+        silent=False
     )
 
     # Install brew packages from Brewfile
