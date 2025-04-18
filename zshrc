@@ -92,20 +92,6 @@ if [ -d "$HOME/Library/Python/2.7/bin" ]; then
     PATH="$HOME/Library/Python/2.7/bin:$PATH"
 fi
 
-#Start powerline daemon (this should make prompt more fast according to
-#https://github.com/powerline/powerline/issues/1653)
-#powerline-daemon -q
-
-# Powerline bash prompt
-#. /Library/Python/2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#old macs
-#. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#. /usr/local/bin/powerline/bindings/zsh/powerline.zsh
-
-# Newline after prompt
-#NEWLINE=$'\n'
-#PS1=$PS1$NEWLINE
-
 # Pure prompt (https://github.com/sindresorhus/pure)
 # Initialize the prompt system (if not so already) and choose pure:
 
