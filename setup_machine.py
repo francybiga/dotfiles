@@ -62,8 +62,7 @@ def setup_tools() -> bool:
 def setup_oh_my_zsh() -> bool:
     """Install Oh My Zsh and its plugins."""
     # Install Oh My Zsh
-    if not run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended'):
-        return False
+    run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended')
 
     # Install zsh-autosuggestions
     zsh_custom = os.getenv(
