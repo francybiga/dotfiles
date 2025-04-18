@@ -29,17 +29,6 @@ def install_if_missing(prog: str, cmd: str) -> bool:
     return run(cmd)
 
 
-# Configuration
-BREW_TOOLS = {
-    "python": "brew install python",  # Use brew version of python instead of macOS one
-    "zsh-syntax-highlighting": "brew install zsh-syntax-highlighting",
-    "node": "brew install node",
-    "pure-prompt": "npm install --global pure-prompt",
-    "ffmpeg": "brew install ffmpeg",
-    "jq": "brew install jq",
-    "rmtrash": "brew install rmtrash",
-}
-
 PYTHON_PACKAGES = {
     "pygit2": "pip install pygit2",
     "powerline-status": "pip3 install powerline-status",
@@ -59,19 +48,12 @@ def setup_tools() -> bool:
         '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"'
     )
 
-    for prog, cmd in BREW_TOOLS.items():
-        if not install_if_missing(prog, cmd):
-            return False
+    # Install brew packages from Brewfile
+    run("brew bundle")
 
     # Install Python packages
     for prog, cmd in PYTHON_PACKAGES.items():
-        if not install_if_missing(prog, cmd):
-            return False
-
-    # Install other tools
-    for prog, cmd in BREW_TOOLS.items():
-        if prog != "brew" and not install_if_missing(prog, cmd):
-            return False
+        install_if_missing(prog, cmd)
 
     return True
 
