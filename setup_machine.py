@@ -8,20 +8,21 @@ import subprocess
 from pathlib import Path
 
 
-def run(cmd: str) -> bool:
+def run(cmd: str, ignore_error: bool = False) -> bool:
     """Run a shell command and return success status."""
     try:
         subprocess.run(cmd, shell=True, check=True,
                        capture_output=True, text=True)
         return True
     except subprocess.CalledProcessError:
-        print(f"Error running: {cmd}")
+        if not ignore_error:
+            print(f"Error running: {cmd}")
         return False
 
 
 def install_if_missing(prog: str, cmd: str) -> bool:
     """Install a program if it's not already installed."""
-    if run(f"command -v {prog} > /dev/null 2>&1"):
+    if run(f"command -v {prog} > /dev/null 2>&1", ignore_error=True):
         print(f"{prog} already installed")
         return True
     print(f"Installing {prog}...")
