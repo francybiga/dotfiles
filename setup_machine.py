@@ -36,7 +36,6 @@ BREW_TOOLS = {
     "node": "brew install node",
     "pure-prompt": "npm install --global pure-prompt",
     "ffmpeg": "brew install ffmpeg",
-    "youtube-dl": "brew install youtube-dl",
     "jq": "brew install jq",
     "rmtrash": "brew install rmtrash",
 }
