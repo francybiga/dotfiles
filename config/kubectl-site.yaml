@@ -1,0 +1,2 @@
+context-template: gke_{{ .Project }}_{{ .Location }}_{{ .Name }}
+use-kubie: false
