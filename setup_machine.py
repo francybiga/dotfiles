@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# flake8: noqa: E501
+
 import os
 import sys
 import subprocess
@@ -27,8 +29,8 @@ def install_if_missing(prog: str, cmd: str) -> bool:
 
 
 # Configuration
-TOOLS = {
-    "brew": '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"',
+BREW_TOOLS = {
+    "python": "brew install python",  # Use brew version of python instead of macOS one
     "zsh-syntax-highlighting": "brew install zsh-syntax-highlighting",
     "node": "brew install node",
     "pure-prompt": "npm install --global pure-prompt",
@@ -39,10 +41,8 @@ TOOLS = {
 }
 
 PYTHON_PACKAGES = {
-    "pip": "sudo easy_install pip",
-    "cffi": "sudo easy_install cffi",
     "pygit2": "pip install pygit2",
-    "powerline-status": "pip install powerline-status --user",
+    "powerline-status": "pip3 install powerline-status",
 }
 
 DOTFILES = [
@@ -53,8 +53,15 @@ DOTFILES = [
 def setup_tools() -> bool:
     """Install all required tools."""
     # Install Homebrew first
-    if not install_if_missing("brew", TOOLS["brew"]):
-        return False
+    install_if_missing(
+        "brew",
+        # The eval command "activates" brew
+        '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"'
+    )
+
+    for prog, cmd in BREW_TOOLS.items():
+        if not install_if_missing(prog, cmd):
+            return False
 
     # Install Python packages
     for prog, cmd in PYTHON_PACKAGES.items():
@@ -62,7 +69,7 @@ def setup_tools() -> bool:
             return False
 
     # Install other tools
-    for prog, cmd in TOOLS.items():
+    for prog, cmd in BREW_TOOLS.items():
         if prog != "brew" and not install_if_missing(prog, cmd):
             return False
 
