@@ -224,3 +224,11 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export PATH=$PATH:/Users/fbigagnoli/.local/bin
 # SPT CONFIG END
 export PATH=/opt/spotify-devex/bin:$PATH
+
+
+# nvm (node version manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export PATH="/Users/fbigagnoli/Library/Python/3.13/bin:$PATH"
+export PATH="/Users/fbigagnoli/Library/Python/3.9/bin:$PATH"
