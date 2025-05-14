@@ -111,17 +111,6 @@ def setup_dotfiles() -> bool:
 
         target.symlink_to(source)
 
-    # Special handling for VSCode settings
-    vscode_user_dir = home_dir / "Library/Application Support/Code/User"
-    if vscode_user_dir.exists():
-        vscode_settings = dotfiles_dir / "vscode/settings.json"
-        vscode_keybindings = dotfiles_dir / "vscode/keybindings.json"
-
-        if vscode_settings.exists():
-            (vscode_user_dir / "settings.json").symlink_to(vscode_settings)
-        if vscode_keybindings.exists():
-            (vscode_user_dir / "keybindings.json").symlink_to(vscode_keybindings)
-
     # Set correct permissions
     for file in [".zshrc", ".vimrc", ".tmux.conf", ".gitconfig"]:
         target = home_dir / file
