@@ -23,5 +23,5 @@ brew 'sd' # an intuitive find & replace CLI https://github.com/chmln/sd
 brew 'wget'
 brew 'broot' # A better way to navigate directories https://github.com/Canop/broot
 brew 'tree'
-brew 'pure-prompt' # Pretty, minimal and fast ZSH prompt
+brew 'pure' # Pretty, minimal and fast ZSH prompt https://github.com/sindresorhus/pure
 brew 'ffmpeg'
