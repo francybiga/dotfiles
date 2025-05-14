@@ -61,17 +61,19 @@ def setup_tools() -> bool:
 
 def setup_oh_my_zsh() -> bool:
     """Install Oh My Zsh and its plugins."""
-    # Install Oh My Zsh
-    run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended')
+    if not os.path.exists(os.path.expanduser("~/.oh-my-zsh")):
+        print("[setup_machine]: Installing Oh My Zsh...")
+        run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended')
 
-    # Install zsh-autosuggestions
-    zsh_custom = os.getenv(
-        "ZSH_CUSTOM", os.path.expanduser("~/.oh-my-zsh/custom"))
-    autosuggestions_path = os.path.join(
-        zsh_custom, "plugins/zsh-autosuggestions")
+        # Install zsh-autosuggestions
+        zsh_custom = os.getenv(
+            "ZSH_CUSTOM", os.path.expanduser("~/.oh-my-zsh/custom"))
+        autosuggestions_path = os.path.join(
+            zsh_custom, "plugins/zsh-autosuggestions")
 
-    if not os.path.exists(autosuggestions_path):
-        return run(f"git clone https://github.com/zsh-users/zsh-autosuggestions {autosuggestions_path}")
+        if not os.path.exists(autosuggestions_path):
+            run(
+                f"git clone https://github.com/zsh-users/zsh-autosuggestions {autosuggestions_path}")
 
     return True
 
